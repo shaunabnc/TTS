@@ -1,0 +1,7 @@
+puts "are you famous?"
+answer = gets.chomp
+
+if answer == 'yes'
+10.times do
+puts "omg"
+end

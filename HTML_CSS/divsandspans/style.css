@@ -1,0 +1,32 @@
+#content {
+  width: 600px;
+  background: #fff;
+}
+
+.crazy-color {
+  color: blue;
+}
+
+#content {
+  width: 600px;
+  background: #fff;
+  border: 10px solid black;
+  padding: 20px; /* Adds 20px of space to all sides */
+  margin: 20px auto;  /* Adds 20px to the top & bottom & centers left/right */
+}
+
+img{
+  width: 2px;
+  float: right;
+}
+
+#footer {
+height: 20px;
+width: 600 px;
+margin: auto;
+border: 10px solid yellow;
+color: #ffff;
+padding: 20px
+background: #336699;
+
+}

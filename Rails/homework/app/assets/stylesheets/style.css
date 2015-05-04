@@ -1,0 +1,26 @@
+h1 {
+    color:orange;
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size:200%;
+}
+p  {
+    color:white;
+    font-family:sans-serif;
+    font-weight: 300;
+    font-size:100%;
+}
+
+body {
+  background: url(http://assets.climatecentral.org/images/uploads/news/CC_blue_sky.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h2 {
+    color:orange;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size:150%;
+}
