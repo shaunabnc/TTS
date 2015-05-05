@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-  	@name = "Shaunabnc"
-  	@contact = 'shaunabnc@gmail'
-  	@info = 'github - shaunabnc'
+
+  	@Home = Home.new
+  
   end
 end
