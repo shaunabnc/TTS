@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  book: MyString
+  purchased: false
+  pages: 1
+  current: MyString
+  page: 1
+  finish: 2015-05-05
+
+two:
+  title: MyString
+  book: MyString
+  purchased: false
+  pages: 1
+  current: MyString
+  page: 1
+  finish: 2015-05-05

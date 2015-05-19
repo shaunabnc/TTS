@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @school.student %>
+</p>
+
+<%= image_tag @school.avatar.url(:thumb) %>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @school.teacher %>
+</p>
+
+<p>
+  <strong>Pet:</strong>
+  <%= @school.pet %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @school.grade %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>

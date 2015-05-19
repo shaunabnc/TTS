@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  root "to_dos#index"
 
-  resources :to_dos
-
+  resources :roomclasses
+  root 'roomclasses#index'
+  
+get 'about' => 'welcome#about'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

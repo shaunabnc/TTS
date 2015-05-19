@@ -1,0 +1,26 @@
+<h1>Welcome to KaShauna's Travel Site</h1>
+<p>Enter some paragraph text here. </p>
+
+<%= @homeland %><br>
+<%= @countries %>
+
+<ul>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+	<%end %>
+</ul>
+
+<%= image_tag "greece1.jpg", alt: "Coloseum"%>
+<%= image_tag "greece2.jpg", alt: "Beach" %>
+<%= image_tag "greece6.jpg", alt: "City" %>
+<%= image_tag "greece4.jpg", alt: "Town" %>
+
+
+<%= @travel_pics.each do |image| %>
+	<p><%= image_tag image, class: "img-responsive", width: "500"%></p>
+	<% end %>
+
+
+<h1>My Destination Wish List</h1>
+
+  

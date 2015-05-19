@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @iceandfire.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @iceandfire.description %>
+</p>
+
+
+<p>
+  <strong>Book:</strong>
+  <%= @iceandfire.book %>
+</p>
+
+<p>
+  <strong>Purchased:</strong>
+  <%= @iceandfire.purchased %>
+</p>
+
+<p>
+  <strong>Total Pages:</strong>
+  <%= @iceandfire.pages %>
+</p>
+
+<p>
+  <strong>Current:</strong>
+  <%= @iceandfire.current %>
+</p>
+
+
+<p>
+  <strong>Finish:</strong>
+  <%= @iceandfire.finish %>
+</p>
+
+<%= link_to 'Edit', edit_iceandfire_path(@iceandfire) %> |
+<%= link_to 'Back', iceandfires_path %>

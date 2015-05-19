@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel panel-primary">
+<div class="panel-heading">
+  <%= @blog_post.title %>
+</div>
+
+<div class="panel-body">
+  <p>by <strong><%= @blog_post.author %></strong><span class ="<%= @blog_post.created_at.strftime('%m/%d/%Y %H:%M:%S') %>" </p>
+  <p> <%= @blog_post.blog_entry %></p>
+  </div></div>
+
+
+
+<div class="panel panel-success">
+<div class="panel-heading">
+Leave a Comment
+</div>
+<div class="panel-body">
+<%= render 'comments/form' %>
+</div></div>
+
+<div>
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> 
+
+<%= link_to 'Back', blog_posts_path %>
+</div>

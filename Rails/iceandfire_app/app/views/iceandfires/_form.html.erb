@@ -1,0 +1,43 @@
+<%= form_for(@iceandfire) do |f| %>
+  <% if @iceandfire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@iceandfire.errors.count, "error") %> prohibited this iceandfire from being saved:</h2>
+
+      <ul>
+      <% @iceandfire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+     <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purchased %><br>
+    <%= f.check_box :purchased %>
+  </div>
+  <div class="field">
+    <%= f.label :Total_Pages %><br>
+    <%= f.number_field :pages %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_Page %><br>
+    <%= f.number_field :page %>
+  </div>
+  <div class="field">
+    <%= f.label :Finish_By %><br>
+    <%= f.date_select :finish %>
+  </div>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>

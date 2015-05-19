@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reading List: A Song of Ice and Fire</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Purchased</th>
+      <th>Pages</th>
+      <th>Current Page</th>
+      <th>Finish</th>
+      <th colspan="12"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @iceandfires.each do |iceandfire| %>
+      <tr>
+        <td><%= iceandfire.title %></td>
+        <td><%= iceandfire.description %></td>
+        <td><%= iceandfire.purchased %></td>
+        <td><%= iceandfire.pages %></td>
+        <td><%= iceandfire.current %></td>
+        <td><%= iceandfire.finish %></td>
+        <td><%= link_to 'Select', iceandfire %></td>
+        <td><%= link_to 'Update', edit_iceandfire_path(iceandfire) %></td>
+        <td><%= link_to 'Delete', iceandfire, method: :delete, data: { confirm: 'Really? Trash it?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Book', new_iceandfire_path %>
