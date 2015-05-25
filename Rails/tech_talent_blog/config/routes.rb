@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+ 
+
+  get 'profile/user_page'
+  get 'your_posts' => 'blog_posts#your_posts'
+  get 'user_profile' => 'blog_posts#user_profile'
+  get 'user_sign_out' => "blog_posts#index"
+
+  devise_for :users
   resources :comments
   resources :blog_posts
-
-  root "blog_posts#index"
+  
+  root 'blog_posts#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

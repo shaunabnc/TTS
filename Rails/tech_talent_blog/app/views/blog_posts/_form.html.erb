@@ -11,18 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, class:"sr-only" %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+  <div class="form-group">
+    <%= f.label :blog_entry, class:"sr-only" %>
+    <%= f.text_area :blog_entry, class: "form-control", placeholder: "Blog Entry Text", rows: 10 %>
   </div>
-  <div class="field">
-    <%= f.label :blog_entry %><br>
-    <%= f.text_area :blog_entry %>
+  <div class="form-group cant-see-me">
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
+
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>

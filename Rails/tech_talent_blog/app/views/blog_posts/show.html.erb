@@ -1,17 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 
+
+<h2>Comments</h2>
+
 <div class="panel panel-primary">
 <div class="panel-heading">
   <%= @blog_post.title %>
 </div>
 
 <div class="panel-body">
-  <p>by <strong><%= @blog_post.author %></strong><span class ="<%= @blog_post.created_at.strftime('%m/%d/%Y %H:%M:%S') %>" </p>
+  by <strong><%= @blog_post.author %></strong><span class ="posted-at">posted at: <%= @blog_post.created_at.strftime('%m/%d/%Y %H:%M:%S') %>" </span></div>
   <p> <%= @blog_post.blog_entry %></p>
   </div></div>
 
+<div class="panel-body">
+  <p>by <strong><%= @blog_post.user.username %></strong> </p></div>
 
+ 
 
 <div class="panel panel-success">
 <div class="panel-heading">
@@ -21,8 +27,22 @@ Leave a Comment
 <%= render 'comments/form' %>
 </div></div>
 
-<div>
+<div class='panel panel-default'>
+<div class="panel-header">
+<h4>Comments</h4>
+</div>
+
+<% @blog_post.comments.each do |comment| %>
+<div class = "panel-body">
+<p><strong><%= comment.author %></strong> said: </p>
+<p><%= comment.comment_entry %></p>
+</div>
+<% end %>
+</div>
+
+
+
+
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> 
 
 <%= link_to 'Back', blog_posts_path %>
-</div>
