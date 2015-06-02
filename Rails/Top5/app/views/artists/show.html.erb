@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @artist.name %>
+  <%= image_tag @artist.avatar.url(:medium) %>
 </p>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |

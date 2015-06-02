@@ -1,0 +1,12 @@
+<h1>Live Feed</h1>
+<p>Hello!</p>
+<p>What the squad is saying:</p>
+
+<div>
+<% @following_assists.each do |f| %>
+	<div>
+	<p><%= f.message %></p>
+	<p><strong><em><%= f.user.username %></em></strong></p>
+	</div>
+	<% end %>
+</div>

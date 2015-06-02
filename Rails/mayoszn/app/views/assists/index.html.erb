@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Assists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assists.each do |assist| %>
+      <tr>
+        <td><%= assist.message %></td>
+        <td><%= link_to assist.user.username, user_profile_path(id: assist.user.id) %></td> 
+        <td><%= link_to 'Show', assist %></td>
+        <td><%= link_to 'Edit', edit_assist_path(assist) %></td>
+        <td><%= link_to 'Destroy', assist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assist', new_assist_path %>

@@ -1,0 +1,7 @@
+<%= form_for @task, remote: true do |f|   %>
+  <%= f.text_area  :description, placeholder: "Describe your task!" %>
+ <br/>
+  <%= f.text_field :deadline, id: "datetimepicker1", placeholder: "When's it due?" %>
+  <br/>
+  <%= f.button :submit %>
+<% end %>

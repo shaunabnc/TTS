@@ -1,0 +1,27 @@
+<%= form_for(@assist) do |f| %>
+  <% if @assist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assist.errors.count, "error") %> prohibited this assist from being saved:</h2>
+
+      <ul>
+      <% @assist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+
+  <div class="field cant-see-me">
+  <%= f.label :user_id%><br>
+  <%= f.number_field :user_id, value: current_user.id %>
+  </div><br>
+  
+  <div class="actions">
+    <%= f.submit "Assist!"%>
+  </div>
+<% end %>

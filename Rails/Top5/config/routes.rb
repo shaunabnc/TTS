@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :songs
   resources :artists
+  
 root 'rock#roll'
 
   # The priority is based upon order of creation: first created -> highest priority.
